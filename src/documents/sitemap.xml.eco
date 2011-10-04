@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://balupton.com</loc>
+    <lastmod><%= @Site.date.toIsoDateString() %></lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <% for Document in @Documents: %>
+    <% if Document.url.indexOf('/markups') == 0 or Document.url.indexOf('/pages') == 0: %>
+  <url>
+      <% if Document.sitemap and Document.sitemap.loc: %>
+    <loc>http://balupton.com<%= Document.sitemap.loc %></loc>
+      <% else: %>
+    <loc>http://balupton.com<%= Document.url %></loc>
+      <% end %>
+      <% if Document.sitemap and Document.sitemap.lastmod: %>
+    <lastmod><%= new Date(Document.sitemap.lastmod).toIsoDateString() %></lastmod>
+      <% else: %>
+    <lastmod><%= new Date(Document.date).toIsoDateString() %></lastmod>
+      <% end %>
+      <% if Document.sitemap and Document.sitemap.changefreq: %>
+    <changefreq><%= Document.sitemap.changefreq %></changefreq>
+      <% else: %>
+    <changefreq>daily</changefreq>
+      <% end %>
+      <% if Document.sitemap and Document.sitemap.priority: %>
+    <priority><%= Document.sitemap.priority %></priority>
+      <% else: %>
+    <priority>0.8</priority>
+      <% end %>
+  </url>
+    <% end %>
+  <% end %>
+</urlset>
