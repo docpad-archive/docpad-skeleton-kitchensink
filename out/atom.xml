@@ -3,13 +3,15 @@
     <title>Benjamin Lupton</title>
     <link href="http://balupton.com/atom.xml" rel="self"/>
     <link href="http://balupton.com"/>
-    <updated>2012-01-02T06:24:57Z</updated>
+    <updated>2012-02-07T21:02:48Z</updated>
     <id>http://balupton.com</id>
     <author>
         <name>Benjamin Lupton</name>
         <email>b@lupton.cc</email>
     </author>
 
+    
+        
     
         
     
@@ -68,11 +70,11 @@
                 &lt;ul&gt;
                     
                         
-                    
-                        
                         &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/getting-started.html&quot; class=&quot;&quot;&gt;
                             &lt;a href=&quot;/pages/getting-started.html&quot; property=&quot;dc:title&quot;&gt;Getting Started&lt;/a&gt;
                         &lt;/li&gt;
+                        
+                    
                         
                     
                         
@@ -123,9 +125,7 @@
     &lt;/div&gt;
     &lt;div class=&quot;container&quot;&gt;
         &lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
-            
-
-&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+            &lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
     &lt;p&gt;Bonjour &lt;strong&gt;world&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 
@@ -147,7 +147,7 @@
         &lt;footer&gt;
             &lt;p&gt;&amp;copy; Company 2011&lt;/p&gt;
             &lt;p style=&quot;float:right;&quot;&gt;
-                This website was generated on 2012-01-02T06:24:57Z and has 23 documents
+                This website was generated on 2012-02-07T21:02:47Z and has 23 documents
             &lt;/p&gt;
         &lt;/footer&gt;
         &lt;section id=&quot;source&quot; class=&quot;source&quot;&gt;
@@ -218,11 +218,11 @@ Bonjour **world**&lt;/pre&gt;
                 &lt;ul&gt;
                     
                         
-                    
-                        
                         &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/getting-started.html&quot; class=&quot;&quot;&gt;
                             &lt;a href=&quot;/pages/getting-started.html&quot; property=&quot;dc:title&quot;&gt;Getting Started&lt;/a&gt;
                         &lt;/li&gt;
+                        
+                    
                         
                     
                         
@@ -273,9 +273,7 @@ Bonjour **world**&lt;/pre&gt;
     &lt;/div&gt;
     &lt;div class=&quot;container&quot;&gt;
         &lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
-            
-
-&lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
+            &lt;div id=&quot;post&quot; class=&quot;post&quot;&gt;
     &lt;p&gt;Hello &lt;strong&gt;world&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
 
@@ -297,7 +295,7 @@ Bonjour **world**&lt;/pre&gt;
         &lt;footer&gt;
             &lt;p&gt;&amp;copy; Company 2011&lt;/p&gt;
             &lt;p style=&quot;float:right;&quot;&gt;
-                This website was generated on 2012-01-02T06:24:57Z and has 23 documents
+                This website was generated on 2012-02-07T21:02:47Z and has 23 documents
             &lt;/p&gt;
         &lt;/footer&gt;
         &lt;section id=&quot;source&quot; class=&quot;source&quot;&gt;
@@ -317,8 +315,6 @@ Hello **world**&lt;/pre&gt;
 &lt;/body&gt;
 &lt;/html&gt;</content>
             </entry>
-        
-    
         
     
         

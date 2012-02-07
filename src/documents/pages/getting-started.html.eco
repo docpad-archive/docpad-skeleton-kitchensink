@@ -28,13 +28,13 @@ title: 'Getting Started'
 			<tr typeof="sioc:Page" about="<%= document.url %>">
 				<td>
 					<%= document.filename %>
-					<pre class="prettyprint lang-<%= document.filename.replace(/^.*\./,'') %>"><%= document.content.replace(/^\s+/,'') %></pre>
+					<pre class="prettyprint lang-<%= document.filename.replace(/^.*\./,'') %>"><%= (document.body or '').replace(/^\s+/,'') %></pre>
 				</td>
 				<td>
 					<a href="<%= document.url %>">
 						<%= document.url.replace(/^.*\//,'') %>
 					</a>
-					<pre class="prettyprint lang-<%= document.extension %>"><%= document.contentRendered.replace(/^\s+/,'') %></pre>
+					<pre class="prettyprint lang-<%= document.extension %>"><%= (document.contentRenderedWithoutLayouts or '').replace(/^\s+/,'') %></pre>
 				</td>
 			</tr>
 			<% end %>
