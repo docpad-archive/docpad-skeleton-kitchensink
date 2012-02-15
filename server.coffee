@@ -1,17 +1,13 @@
-# -------------------------------------
-# Configuration
-
 # Requires
 docpad = require 'docpad'
 express = require 'express'
 
+# =====================================
+# Configuration
+
 # Variables
 oneDay = 86400000
 expiresOffset = oneDay
-
-
-# -------------------------------------
-# DocPad Creation
 
 # Configuration
 docpadPort = process.env.DOCPADPORT || process.env.PORT || 10113
@@ -19,7 +15,7 @@ docpadPort = process.env.DOCPADPORT || process.env.PORT || 10113
 # Create Servers
 docpadServer = express.createServer()
 
-# Setup DocPad
+# Configure DocPad
 docpadConfig =
 	port: docpadPort
 	maxAge: expiresOffset
@@ -27,32 +23,37 @@ docpadConfig =
 	plugins:
 		admin: requireAuthentication: true
 		rest: requireAuthentication: true
-docpadInstance = docpad.createInstance(docpadConfig)
-
-# Extract Logger
-logger = docpadInstance.logger
 
 
-# -------------------------------------
-# Server Configuration
+# =====================================
+# Start & Extend DocPad
 
-# DNS Servers
-# masterServer.use express.vhost 'yourwebsite.*', docpadServer
+# Create DocPad, and wait for it to load
+docpadInstance = docpad.createInstance docpadConfig, (err) ->
+	# Prepare
+	throw err  if err
+	logger = docpadInstance.logger
 
-# Start Server
-# docpadInstance.action 'server'
-docpadInstance.action 'server generate' # we need the generate for dynamic documents, if you don't utilise dynamic documents, then you just need the server
+	# ---------------------------------
+	# Server Configuration
+
+	# DNS Servers
+	# masterServer.use express.vhost 'yourwebsite.*', docpadServer
+
+	# Start Server
+	# we need the generate for dynamic documents, if you don't utilise dynamic documents, then you just need the server
+	docpadInstance.action 'server generate'
 
 
-# -------------------------------------
-# Server Extensions
+	# ---------------------------------
+	# Server Extensions
 
-# Place any custom routing here
-# http://expressjs.com/
+	# Place any custom routing here
+	# http://expressjs.com/
 
 
-
-# -------------------------------------
+# =====================================
 # Exports
 
+# Export the DocPad Server we created
 module.exports = docpadServer
