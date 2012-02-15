@@ -8,7 +8,7 @@
 		"bootstrap",
 		"website",
 		"docpad",
-		"theme"
+		"docpad-skeleton"
 	],
 	"author": {
 		"name": "Bevry Pty Ltd",
@@ -45,7 +45,7 @@
 	"dependencies": {
 		"coffee-script": "1.2.x",
 		"express": "2.5.x",
-		"docpad": "2.6.1"
+		"docpad": "3.2.0"
 	},
 	"engines" : {
 		"node": ">=0.4.0"

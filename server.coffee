@@ -20,13 +20,14 @@ docpadPort = process.env.DOCPADPORT || process.env.PORT || 10113
 docpadServer = express.createServer()
 
 # Setup DocPad
-docpadInstance = docpad.createInstance
+docpadConfig =
 	port: docpadPort
 	maxAge: expiresOffset
 	server: docpadServer
 	plugins:
 		admin: requireAuthentication: true
 		rest: requireAuthentication: true
+docpadInstance = docpad.createInstance(docpadConfig)
 
 # Extract Logger
 logger = docpadInstance.logger
