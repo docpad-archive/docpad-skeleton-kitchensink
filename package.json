@@ -1,6 +1,6 @@
 {
 	"name": "kitchensink.docpad",
-	"version": "0.6.0",
+	"version": "0.6.1",
 	"description": "Kitchensink Skeleton for DocPad, based off Twitter's Bootstrap",
 	"homepage": "https://github.com/bevry/kitchensink.docpad",
 	"keywords": [
@@ -45,7 +45,7 @@
 	"dependencies": {
 		"coffee-script": "1.2.x",
 		"express": "2.5.x",
-		"docpad": "3.2.0"
+		"docpad": "3.2.1"
 	},
 	"engines" : {
 		"node": ">=0.4.0"
