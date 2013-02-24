@@ -24,7 +24,7 @@
 	<![endif]-->
 
 	<!-- Styles -->
-	<%- @getBlock('styles').add(["/styles/style.css","/vendor/prettify.css","/vendor/responsive.min.css"]).toHTML() %>
+	<%- @getBlock('styles').add(@site.styles).toHTML() %>
 </head>
 <body>
 	<!-- Markup -->
@@ -58,12 +58,12 @@
 			<h3 id="source-header"><a>Click to view this page's source</a></h3>
 			<div id="source-code">
 				<div><%= 'src/'+@document.relativePath %></div>
-				<pre class="prettyprint"><%= @document.source %></pre>
+				<pre><code class="highlight lang-<%= @document.extension %>"><%= @document.source %></code></pre>
 			</div>
 		</section>
 	</div><!-- /container -->
 
 	<!-- Scripts -->
-	<%- @getBlock('scripts').add(["/vendor/jquery-1.6.4.min.js","/vendor/prettify.js","/scripts/script.js"]).toHTML() %>
+	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
 </body>
 </html>

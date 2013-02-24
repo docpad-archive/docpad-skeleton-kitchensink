@@ -29,8 +29,7 @@ title: 'Getting Started'
 		</tr>
 	</thead>
 	<tbody>
-		<% for document in @getCollection('documents').sortArray('title':1): %>
-			<% if document.url.indexOf('/markups') == 0: %>
+		<% for document in @getCollection('markups').toJSON(): %>
 			<tr typeof="sioc:Page" about="<%= document.url %>" id="<%= document.filename %>">
 				<td colspan="2">
 					<strong><%= document.title %></strong>
@@ -39,39 +38,34 @@ title: 'Getting Started'
 			<tr typeof="sioc:Page" about="<%= document.url %>">
 				<td>
 					<%= document.filename %>
-					<pre class="prettyprint lang-<%= document.filename.replace(/^.*\./,'') %>"><%= (document.content or '').replace(/^\s+/,'') %></pre>
+					<pre><code class="highlight lang-<%= document.extension %>"><%= (document.content or '').replace(/^\s+/,'') %></code></pre>
 				</td>
 				<td>
 					<a href="<%= document.url %>">
-						<%= document.url.replace(/^.*\//,'') %>
+						<%= document.outFilename %>
 					</a>
-					<pre class="prettyprint lang-<%= document.extension %>"><%= (document.contentRendered or '').replace(/^\s+/,'') %></pre>
+					<pre><code class="highlight lang-<%= document.outExtension %>"><%= (document.contentRendered or '').replace(/^\s+/,'') %></code></pre>
 				</td>
 			</tr>
-			<% end %>
 		<% end %>
 	</tbody>
 </table>
 
 <h2 id="blog">Example Blog Posts</h2>
 <ul>
-	<% for document in @getCollection('documents').toJSON(): %>
-		<% if document.url.indexOf('/posts') == 0: %>
+	<% for document in @getCollection('posts').toJSON(): %>
 		<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'	if @document.url is document.url %>">
 			<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
 		</li>
-		<% end %>
 	<% end %>
 </ul>
 
 <h2 id="nifties">Nifties</h2>
 <ul>
-	<% for document in @getCollection('documents').toJSON(): %>
-		<% if document.url.indexOf('/nifty') == 0: %>
+	<% for document in @getCollection('nifties').toJSON(): %>
 		<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'	if @document.url is document.url %>">
 			<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
 		</li>
-		<% end %>
 	<% end %>
 	<li><a href="/search?query=coffee">A dynamic search page for <em>"coffee"</em></a></li>
 </ul>

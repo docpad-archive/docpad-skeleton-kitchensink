@@ -33,6 +33,18 @@ docpadConfig = {
 				place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
 				"""
 
+			# Styles
+			styles: [
+				"/vendor/responsive.min.css"
+				"/vendor/highlightjs.css"
+				"/styles/style.css"
+			]
+
+			# Scripts
+			scripts: [
+				"/vendor/jquery.min.js"
+				"/scripts/script.js"
+			]
 
 		# -----------------------------
 		# Helper Functions
@@ -58,6 +70,34 @@ docpadConfig = {
 			# Merge the document keywords with the site keywords
 			@site.keywords.concat(@document.keywords or []).join(', ')
 
+
+	# =================================
+	# DocPad Collections
+
+	collections:
+		nifties: ->
+			@getCollection('documents').findAllLive({relativeOutDirPath:'nifties'},[title:1])
+
+		markups: ->
+			@getCollection('documents').findAllLive({relativeOutDirPath:'markups'},[title:1])
+
+		pages: ->
+			@getCollection('documents').findAllLive({relativeOutDirPath:'pages'},[title:1])
+
+		posts: ->
+			@getCollection('documents').findAllLive({relativeOutDirPath:'posts'},[date:-1])
+
+
+	# =================================
+	# DocPad Plugins
+
+	plugins:
+		highlightjs:
+			aliases:
+				haml: 'xml'
+				less: 'css'
+				stylus: 'css'
+				md: 'markdown'
 
 	# =================================
 	# DocPad Events
