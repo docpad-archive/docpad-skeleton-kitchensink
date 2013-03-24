@@ -10,13 +10,13 @@ A DocPad Skeleton useful for showcasing different features and functionality of 
 1. Clone the project and run the server
 
 	``` bash
-	git clone git://github.com/bevry/website.docpad.git
-	cd website.docpad
-	npm install
-	coffee server.coffee
+	git clone git://github.com/docpad/kitchensink.docpad.git
+	cd kitchensink.docpad
+	npm install -f
+	docpad run
 	```
 
-1. [Open http://localhost:10113/](http://localhost:10113/)
+1. [Open http://localhost:9778/](http://localhost:9778/)
 
 1. Start hacking away by modifying the `src` directory
 
