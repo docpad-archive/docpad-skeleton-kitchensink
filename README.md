@@ -1,11 +1,11 @@
-# The Kitchensink Skeleton, for [DocPad](https://github.com/bevry/docpad)
+# The Kitchensink Skeleton, for [DocPad](http://docpad.org)
 
 A DocPad Skeleton useful for showcasing different features and functionality of DocPad. Implemented using [Twitter Bootstrap](http://twitter.github.com/bootstrap/) .
 
 
 ## Getting Started
 
-1. [Install DocPad](https://github.com/bevry/docpad)
+1. [Install DocPad](http://docpad.org)
 
 1. Clone the project and run the server
 
