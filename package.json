@@ -38,7 +38,6 @@
 		"docpad-plugin-highlightjs": "2.x",
 		"docpad-plugin-html2coffee": "2.x",
 		"docpad-plugin-jade": "2.x",
-		"docpad-plugin-js2coffee": "2.x",
 		"docpad-plugin-less": "2.x",
 		"docpad-plugin-marked": "2.x",
 		"docpad-plugin-nativecomments": "2.x",
