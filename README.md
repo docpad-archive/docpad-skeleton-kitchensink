@@ -1,22 +1,22 @@
-# The Kitchensink Skeleton, for [DocPad](https://github.com/bevry/docpad)
+# The Kitchensink Skeleton, for [DocPad](http://docpad.org)
 
 A DocPad Skeleton useful for showcasing different features and functionality of DocPad. Implemented using [Twitter Bootstrap](http://twitter.github.com/bootstrap/) .
 
 
 ## Getting Started
 
-1. [Install DocPad](https://github.com/bevry/docpad)
+1. [Install DocPad](http://docpad.org)
 
 1. Clone the project and run the server
 
 	``` bash
-	git clone git://github.com/bevry/website.docpad.git
-	cd website.docpad
-	npm install
-	coffee server.coffee
+	git clone git://github.com/docpad/kitchensink.docpad.git
+	cd kitchensink.docpad
+	npm install -f
+	docpad run
 	```
 
-1. [Open http://localhost:10113/](http://localhost:10113/)
+1. [Open http://localhost:9778/](http://localhost:9778/)
 
 1. Start hacking away by modifying the `src` directory
 
