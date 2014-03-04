@@ -25,11 +25,11 @@
     "url": "http://github.com/bevry/kitchensink.docpad.git"
   },
   "engines": {
-    "node": "0.8.x",
-    "npm": "1.1.x"
+    "node": "0.10",
+    "npm": "1.4"
   },
   "dependencies": {
-    "docpad": "~6.64.0",
+    "docpad": "~6.57.3",
     "docpad-plugin-cleanurls": "~2.7.0",
     "docpad-plugin-coffeescript": "~2.3.0",
     "docpad-plugin-coffeekup": "~2.2.0",

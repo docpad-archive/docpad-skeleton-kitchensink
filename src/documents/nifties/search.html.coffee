@@ -4,10 +4,10 @@ title: 'Search Results'
 dynamic: true
 ###
 
-if @req.query.query
-	query = @req.query.query
+query = (@req.query or @req.body).query
 
-	h2 "Searching for #{query}"
+if query
+	h2 "Searching for #{h query}"
 
 	ul ->
 		for document in @getCollection('documents').findAll({title:$like:query}).toJSON()
@@ -16,4 +16,10 @@ if @req.query.query
 					text document.title
 
 else
-	h2 "No query provided"
+	h2 "Try search for something"
+
+	form action:'', method:'GET', ->
+
+		input type:'text', name:'query', value:(query or 'coffee'), ->
+
+		input type:'submit', value:'Search', ->
