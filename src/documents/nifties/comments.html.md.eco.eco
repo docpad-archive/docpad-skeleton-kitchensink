@@ -4,6 +4,8 @@ title: "Native Comments Example"
 layout: default
 ---
 
+<strong>NOTE: This example has not been maintained through the DocPad versions. It is possible though, we just have to update the code.</strong>
+
 This page showcases native comments. Comments are posted to our backend [express.js](http://expressjs.com/) server, and handled by our custom routes defined in our [serverExtend event](http://docpad.org/docs/events), when then inserts the comment into the in-memory [backbone.js](backbonejs.org) database and added to this dynamic page via a [queryengine collection](http://bevry.me/learn/queryengine-guide).
 
 <%- @getCommentsBlock() %>
