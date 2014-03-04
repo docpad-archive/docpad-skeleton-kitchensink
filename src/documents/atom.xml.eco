@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>Benjamin Lupton</title>
-	<link href="http://balupton.com/atom.xml" rel="self"/>
-	<link href="http://balupton.com"/>
+	<title><%= @site.title %></title>
+	<link href="<%= @site.url %>/atom.xml" rel="self"/>
+	<link href="<%= @site.url %>"/>
 	<updated><%= @site.date.toISOString() %></updated>
-	<id>http://balupton.com</id>
+	<id><%= @site.url %></id>
+
 	<author>
-		<name>Benjamin Lupton</name>
-		<email>b@lupton.cc</email>
+		<name><%= @site.author or '' %></name>
+		<email><%= @site.email or '' %></email>
 	</author>
 
 	<% for document in @getCollection('documents').toJSON(): %>
 		<% if document.url.indexOf('/posts') == 0: %>
 			<entry>
 				<title><%= document.title %></title>
-				<link href="http://balupton.com<%= document.url %>"/>
+				<link href="<%= @site.url%><%= document.url %>"/>
 				<updated><%= document.date.toISOString() %></updated>
-				<id>http://balupton.com<%= document.url %></id>
+				<id><%= @site.url%><%= document.url %></id>
 				<content type="html"><%= document.contentRendered %></content>
 			</entry>
 		<% end %>

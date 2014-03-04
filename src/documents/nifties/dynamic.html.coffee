@@ -1,6 +1,6 @@
-### coffee
-title: "Dynamic Content Example"
-layout: "default"
+###
+title: Dynamic Content Example
+layout: default
 dynamic: true
 ###
 

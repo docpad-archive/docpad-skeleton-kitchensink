@@ -33,6 +33,12 @@ docpadConfig = {
 				place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
 				"""
 
+			# The website author
+			author: "Benjamin Lupton"
+
+			# The website's email
+			email: "b@lupton.cc"
+
 			# Styles
 			styles: [
 				"/vendor/responsive.min.css"
@@ -126,6 +132,24 @@ docpadConfig = {
 					res.redirect(newUrl+req.url, 301)
 				else
 					next()
+
+
+	# =================================
+	# Environments
+
+	# DocPad's default environment is the production environment
+	# The development environment, actually extends from the production environment
+
+	# The following overrides our production url in our development environment with false
+	# This allows DocPad's to use it's own calculated site URL instead, due to the falsey value
+	# This allows <%- @site.url %> in our template data to work correctly, regardless what environment we are in
+
+	environments:
+		development:
+			templateData:
+				site:
+					url: false
+
 }
 
 
